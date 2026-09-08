@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "author": "Thara",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 20,
+      "left": 220,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -30,
+      "left": 250,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 140,
+      "left": 240,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 120,
+      "left": 190,
+      "rotate": 90,
+      "attrs": {
+        "value": "10k"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:D5",
+      "r1:1",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "r1:2",
+      "led1:A",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led1:C",
+      "esp:GND.1",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:3V3",
+      "btn1:1.l",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "btn1:2.l",
+      "esp:D4",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:D4",
+      "r2:1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "r2:2",
+      "esp:GND.2",
+      "black",
+      [
+        "v0"
+      ]
+    ]
+  ]
+}
