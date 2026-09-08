@@ -28,6 +28,25 @@
       "attrs": {
         "color": "red"
       }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 140,
+      "left": 240,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 120,
+      "left": 190,
+      "rotate": 90,
+      "attrs": {
+        "value": "10k"
+      }
     }
   ],
   "connections": [
@@ -50,6 +69,38 @@
     [
       "led1:C",
       "esp:GND.1",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:3V3",
+      "btn1:1.l",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "btn1:2.l",
+      "esp:D4",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:D4",
+      "r2:1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "r2:2",
+      "esp:GND.2",
       "black",
       [
         "v0"
